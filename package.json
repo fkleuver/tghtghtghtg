@@ -3,7 +3,8 @@
   "license": "ISC",
   "scripts": {
     "bootstrap": "lerna bootstrap --ci --hoist",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "publish:nightly": "ts-node scripts/publish-nightly.ts dev lerna.json"
   },
   "dependencies": {},
   "devDependencies": {
