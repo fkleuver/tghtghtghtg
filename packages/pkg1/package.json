@@ -1,13 +1,12 @@
 {
   "name": "@tghtghtghtg/pkg1",
-  "version": "0.1.1",
+  "version": "0.1.2-dev.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "ISC",
   "scripts": {
     "build": "tsc -b"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/node": "^10.9.4",
     "cross-env": "^5.2.0",

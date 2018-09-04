@@ -1,6 +1,6 @@
 {
   "name": "@tghtghtghtg/pkg3",
-  "version": "0.1.1",
+  "version": "0.1.2-dev.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "ISC",
@@ -8,8 +8,8 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "@tghtghtghtg/pkg1": "^0.1.1",
-    "@tghtghtghtg/pkg2": "^0.1.1"
+    "@tghtghtghtg/pkg1": "^0.1.2-dev.0",
+    "@tghtghtghtg/pkg2": "^0.1.2-dev.0"
   },
   "devDependencies": {
     "@types/node": "^10.9.4",
