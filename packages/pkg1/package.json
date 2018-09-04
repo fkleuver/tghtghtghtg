@@ -7,6 +7,9 @@
   "scripts": {
     "build": "tsc -b"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/node": "^10.9.4",
     "cross-env": "^5.2.0",
@@ -14,5 +17,6 @@
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.5.0",
     "typescript": "^3.0.3"
-  }
+  },
+  "gitHead": "e28710d58379b4295ef92c2b5f732c8d5323b0fe"
 }
