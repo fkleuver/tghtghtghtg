@@ -1,0 +1,10 @@
+.idea
+.DS_STORE
+
+**/node_modules
+**/coverage
+**/dist
+/test/**/coverage
+
+npm-debug.log
+lerna-debug.log

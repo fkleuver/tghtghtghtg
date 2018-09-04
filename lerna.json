@@ -1,0 +1,9 @@
+{
+  "lerna": "3.2.1",
+  "packages": [
+    "packages/pkg1",
+    "packages/pkg2",
+    "packages/pkg3"
+  ],
+  "version": "0.1.1"
+}
