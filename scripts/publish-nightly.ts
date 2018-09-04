@@ -1,7 +1,7 @@
 import { normalize } from "path";
 import * as assert from "assert";
 import { readFileSync, writeFileSync } from "fs";
-import * as publish from "@lerna/publish/index";
+const lerna = require("lerna");
 import * as log from "fancy-log";
 import chalk from "chalk";
 
@@ -42,9 +42,7 @@ function run(): void {
   const { tag, lernaJsonFilePath } = parseArgs();
   const { major, minor, patch } = getCurrentVersion(lernaJsonFilePath);
   const nightlyVersion = getNightlyVersion(major, minor, patch, tag);
-
-  const command = publish([nightlyVersion, '--npm-tag', 'dev', '--no-git-tag-version', '--no-push']);
-
+  lerna(['publish', nightlyVersion, '--npm-tag', 'dev', '--no-git-tag-version', '--no-push', '-y']);
 }
 
 run();
