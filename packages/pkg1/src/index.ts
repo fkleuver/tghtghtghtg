@@ -1,1 +1,1 @@
-export const pkg1 = 'foo1';
+export const pkg1 = 'foo2';
