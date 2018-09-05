@@ -42,7 +42,7 @@ function run(): void {
   const { tag, lernaJsonFilePath } = parseArgs();
   const { major, minor, patch } = getCurrentVersion(lernaJsonFilePath);
   const nightlyVersion = getNightlyVersion(major, minor, patch, tag);
-  lerna(['publish', nightlyVersion, '--npm-tag', 'dev', '--no-git-tag-version', '--no-push', '--no-verify-registry', '--no-verify-access', '-y']);
+  lerna(['publish', nightlyVersion, '--npm-tag', 'dev', '--no-git-tag-version', '--no-push', '--no-verify-registry', '--no-verify-access', '--registry', 'https://registry.npmjs.org/', '-y']);
 }
 
 run();
