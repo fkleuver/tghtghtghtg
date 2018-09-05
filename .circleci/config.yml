@@ -10,7 +10,7 @@ var_1: &cache_key tghtghtghtg-{{ .Branch }}-{{ checksum "package-lock.json" }}
 
 version: 2
 jobs:
-  publish_nightly:
+  build:
     <<: *defaults
     steps:
       - checkout
