@@ -15,15 +15,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Authenticate with registry
-          command: echo "https://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-          command: echo "https://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
-          command: echo "https://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/packages/pkg1/.npmrc
-          command: echo "https://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/packages/pkg2/.npmrc
-          command: echo "https://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/packages/pkg3/.npmrc
-      - run:
           name: Publish nightly release
           command: |
+            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/packages/pkg1/.npmrc
+            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/packages/pkg2/.npmrc
+            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/packages/pkg3/.npmrc
             npm ci
             npm run bootstrap
             npm run build
