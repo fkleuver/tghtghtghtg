@@ -32,7 +32,7 @@ function getCurrentVersion(lernaJsonFilePath: string) {
 }
 
 function getNightlyVersion(major: string, minor: string, patch: string, tag: string): string {
-  const date = new Date().toISOString().replace(/:|T|\.|-/g, "").slice(0, 8);
+  const date = new Date().toISOString().replace(/:|T|\.|-/g, "").slice(0, 14);
   const nightlyVersion = `${major}.${minor}.${patch}-${tag}.${date}`;
   log(`> ${chalk.green('publish-nightly')} ${chalk.cyan('nightly version')} ${nightlyVersion}`);
   return nightlyVersion;
