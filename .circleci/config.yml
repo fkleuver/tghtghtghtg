@@ -17,11 +17,7 @@ jobs:
       - run:
           name: Publish nightly release
           command: |
-            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
-            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/packages/pkg1/.npmrc
-            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/packages/pkg2/.npmrc
-            echo "@tghtghtghtg:registry=http://registry.npmjs.org/\nhttp://registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/packages/pkg3/.npmrc
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
             npm ci
             npm run bootstrap
             npm run build
