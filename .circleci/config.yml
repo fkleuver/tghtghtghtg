@@ -16,12 +16,7 @@ jobs:
       - checkout
       - run:
           name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/.npmrc
-          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
-          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/packages/.npmrc
-          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/packages/pkg1/.npmrc
-          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/packages/pkg2/.npmrc
-          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/packages/pkg3/.npmrc
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
       - run:
           name: Publish nightly release
           command: |
