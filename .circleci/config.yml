@@ -25,17 +25,4 @@ jobs:
             npm run build
             npm run publish:nightly
 
-workflows:
-  version: 2
-  default_workflow:
-  nightly:
-    triggers:
-      - schedule:
-          cron: "8 * * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - publish_nightly
 
